@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private static int SIGN_IN_CODE =1;
     private RelativeLayout activity_main;
     private FirebaseListAdapter<Message> adapter;
-    private FloatingActionButton sendBth;
+    private FloatingActionButton sendbth;
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -46,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         activity_main =findViewById(R.id.activity_main);
-        sendBth.setOnClickListener(new View.OnClickListener() {
+        sendbth =findViewById(R.id.bthSend);
+        sendbth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 EditText textField =findViewById(R.id.messageField);
